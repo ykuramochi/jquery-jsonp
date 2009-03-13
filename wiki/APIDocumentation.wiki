@@ -1,0 +1,85 @@
+#summary API documentation
+
+=jQuery.jsonp( options )=
+
+==Summary==
+
+Load a remote JSON object using a JSONP request.
+
+$.jsonp() returns the extended options (the _xOption_ object) for the query (that is an object containing all the options passed to the function plus defaults for those not provided). In most cases you won't need _xOption_ to manipulate directly, but it is available if you need to abort the request manually (_xOption_ provides an _abort()_ method to that end).
+
+$.jsonp() takes one argument, an object of key/value pairs, that are used to initialize and handle the request. All options are optional. A default can be set for any option with $.jsonp.setup(). See below for a full list of the key/values that can be used.
+
+==Options==
+
+===beforeSend - _function (undefined)_===
+
+A function called before the request is even performed. You may return false in function to cancel the request.
+{{{
+function (xOption) {
+  this; // the xOption object
+}
+}}}
+
+===cache - _boolean (false)_===
+
+If set to false it will force the data that you request not to be cached by the browser, unless the pageCache option is set to true.
+
+===callback - _string ("C")_===
+
+Name of the JSONP callback as provided in the request url. Most of the time, you won't have to change this value but some JSONP providers have a predefined callback name that cannot be overidden. Set the name of said callback in the _callback_ option and $.jsonp will catch the call.
+
+===complete - _function (undefined)_===
+
+A function to be called when the request finishes (after success and error callbacks are executed). The function gets passed two arguments: The _xOption_ object and a string describing the type of completion of the request (_"success"_, _"error"_ or _"timeout"_).
+{{{
+function (xOption, textStatus) {
+  this; // the xOption object
+}
+}}}
+
+===data - _Object | String (undefined)_===
+
+Data to be sent to the server. It is converted to a query string, if not already a string, and then appended to the url. Object must be Key/Value pairs. If value is an Array, jQuery serializes multiple values with same key i.e. {foo:["bar1", "bar2"]} becomes '&foo=bar1&foo=bar2'.
+
+===dataFilter - _function (undefined)_===
+
+A function to be used to handle the raw responsed JSON object. This is a pre-filtering function to sanitize the response. You should return the sanitized data. The function gets one argument: The raw JSON object returned from the server.
+{{{
+function (json) {
+  // do something
+  // return the sanitized json
+  return json;
+}
+}}}
+
+===error - _function (undefined)_===
+
+A function to be called if the request fails. The function is passed two arguments: The xOption object and a string describing the type of error that occurred. Possible values for the second argument are "error" (the request finished but the JSONP callback was not called) or "timeout".
+{{{
+function (xOption, textStatus) {
+  this; // the xOption object
+}
+}}}
+
+===pageCache - _boolean (false)_===
+
+If set to true, will override the _cache_ option and provide a page based caching of the result of the request. Whenever another request is made later on with pageCache set to true and with options inducing the exact same final url for the request, the cached response is used and no distant call is actually made.
+Lifetime of this cache is page based which means it gets erased at each page reload.
+
+===success - _function (undefined)_===
+
+A function to be called if the request succeeds. The function gets passed two arguments: The JSON object returned from the server and a string describing the status (always "success").
+{{{
+function (json, textStatus) {
+  this; // the xOption object
+}
+}}}
+
+===timeout - _Number (0)_===
+
+If greater than 0, sets a local timeout (in milliseconds) for the request. This will override the global timeout, if one is set via $.jsonp.setup. For example, you could use this property to give a single request a longer timeout than all other requests that you've set to time out in one second. See $.jsonp.setup() for global timeouts.
+
+===url - _String (location.href)_===
+
+The URL to request. If more than one _?_ is found in the url, the latest will be replaced by the value of the _callback_ option. Note that, given this rule, no valid url can have more than 2 _?_.
