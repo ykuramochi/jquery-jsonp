@@ -2,7 +2,7 @@
 
 =jQuery.jsonp( options )=
 
-==Summary==
+==Overview==
 
 Load a remote JSON object using a JSONP request.
 
@@ -78,8 +78,18 @@ function (json, textStatus) {
 
 ===timeout - _Number (0)_===
 
-If greater than 0, sets a local timeout (in milliseconds) for the request. This will override the global timeout, if one is set via $.jsonp.setup. For example, you could use this property to give a single request a longer timeout than all other requests that you've set to time out in one second. See $.jsonp.setup() for global timeouts.
+If greater than 0, sets a local timeout (in milliseconds) for the request. This will override the global timeout, if one is set via $.jsonp.setup. For example, you could use this property to give a single request a longer timeout than all other requests that you've set to time out in one second.
 
 ===url - _String (location.href)_===
 
 The URL to request. If more than one _?_ is found in the url, the latest will be replaced by the value of the _callback_ option. Note that, given this rule, no valid url can have more than 2 _?_.
+
+=jQuery.jsonp.setup( options )=
+
+==Overview==
+
+Setup global settings for JSONP requests.
+
+==Options==
+
+See $.jsonp for a description of all available options.
