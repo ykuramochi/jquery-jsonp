@@ -1,4 +1,4 @@
-#summary Tips & Tricks: what you can do with jquery.jsonp
+#summary Tips & Tricks: what you can do with $.jsonp()
 
 =Tips & Tricks=
 
