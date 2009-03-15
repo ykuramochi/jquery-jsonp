@@ -29,6 +29,26 @@ If set to false it will force the data that you request not to be cached by the 
 
 Name of the JSONP callback as provided in the request url. Most of the time, you won't have to change this value but some JSONP providers have a predefined callback name that cannot be overidden. Set the name of said callback in the _callback_ option and $.jsonp will catch the call.
 
+===callbackParameter - _string (undefined)_===
+
+*_as of version 1.0.1_*
+
+If provided, specifies the name of the url parameter that conveys the callback name to the service.
+
+Example:
+{{{
+$.jsonp({
+  url: "http://service.org/path?param1=xx&param2=xx",
+  callbackParameter: "callback"
+});
+}}}
+is strictly equivalent to:
+{{{
+$.jsonp({
+  url: "http://service.org/path?param1=xx&param2=xx&callback=?"
+});
+}}}
+
 ===complete - _function (undefined)_===
 
 A function to be called when the request finishes (after success and error callbacks are executed). The function gets passed two arguments: The _xOption_ object and a string describing the type of completion of the request (_"success"_, _"error"_ or _"timeout"_).
