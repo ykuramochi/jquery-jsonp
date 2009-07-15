@@ -115,3 +115,29 @@ $.jsonp({
     }
 });
 }}}
+
+==Arrays are not arrays==
+
+Atzoum of the [http://cometdproject.dojotoolkit.org cometd] crew pointed out quite an annoying side effect due to the use of iframes within $.jsonp().
+
+Iframes and the main window do not share constructors. For instance, if you create an array in an iframe, it is another "Array" function than the one within the main window scope that'll be used. Furthermore, it is impossible to re-route iframe constructors to their main window counterparts for security reasons.
+
+So, if a jsonp request returns an array (let's call it myArray) and you try to confirm it is an array within your own code, myArray.constructor===Array will return false. Even worse, Internet Explorer will fail on this very statement saying myArray.constructor does not exist (or myArray.sort or any other method).
+
+One way to work around this issue while leaving the rest of your code untouched is to serialize and deserialize the response prior to passing it to the success callback. To that end, you can make use of the JSON object within the dataFilter callback (if your browser does not provide a native JSON implementation, check the [http://www.json.org/json2.js json.org one]).
+
+The code goes as follows:
+{{{
+$.jsonp({
+    url: "...",
+    dataFilter: function(json) {
+       JSON.parse(JSON.stringify(json));
+    },
+    success: function(json) {
+       // your success code here
+    },
+    error: function() {
+       // error handling goes here
+    }
+});
+}}}
