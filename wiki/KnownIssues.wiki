@@ -2,4 +2,4 @@
 
 = Known Issues =
 
-  * *document.domain (_Internet Explorer_)*: jquery.jsonp() does not work when document.domain is set in Internet Explorer.
+  * *document.domain (_Internet Explorer_)*: $.jsonp() does not work when document.domain is set in Internet Explorer.
