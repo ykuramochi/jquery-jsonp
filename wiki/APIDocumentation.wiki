@@ -1,4 +1,5 @@
 #summary API documentation
+#labels Featured
 
 =jQuery.jsonp( options )=
 
