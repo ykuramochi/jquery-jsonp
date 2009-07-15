@@ -4,7 +4,7 @@
 
 ==Simple usage==
 
-Get user profiles from YouTube
+Get user profiles from [http://www.youtube.com/ YouTube]
 {{{
 function getProfile(userId) {
 
@@ -80,7 +80,7 @@ $.jsonp handles two types of cache. One is browser based, the other is page base
 
 Usual JSONP implementations rely on generated callback names to allow concurrent JSONP requests. $.jsonp does not. No matter the situation, if you stick by the default behavior, the callback will always be "C". This means that the url used to perform the request is constant from one call to another for the same set of parameters. In that case, smart providers can issue a _304: Not Modified_ and allow the browser to cache the HTTP response.
 
-This is not an exact science. YouTube, for instance, does not always issue a _304_ but when it does eventually, it means further JSONP requests will be directly taken from the cache.
+This is not an exact science. [http://www.youtube.com/ YouTube], for instance, does not always issue a _304_ but when it does eventually, it means further JSONP requests will be directly taken from the cache.
 
 To take advantage of browser caching, you have to set the _cache_ option to true. For instance:
 {{{
