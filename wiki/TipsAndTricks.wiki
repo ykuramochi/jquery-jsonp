@@ -131,7 +131,7 @@ The code goes as follows:
 $.jsonp({
     url: "...",
     dataFilter: function(json) {
-       JSON.parse(JSON.stringify(json));
+       return JSON.parse(JSON.stringify(json));
     },
     success: function(json) {
        // your success code here
