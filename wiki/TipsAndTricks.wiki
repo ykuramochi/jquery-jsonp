@@ -1,4 +1,5 @@
 #summary Tips & Tricks: what you can do with $.jsonp()
+#labels Featured
 
 =Tips & Tricks=
 
