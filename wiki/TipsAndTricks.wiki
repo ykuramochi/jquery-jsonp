@@ -124,7 +124,7 @@ Iframes and the main window do not share constructors. For instance, if you crea
 
 So, if a jsonp request returns an array (let's call it myArray) and you try to confirm it is an array within your own code, myArray.constructor===Array will return false. Even worse, Internet Explorer will fail on this very statement saying myArray.constructor does not exist (or myArray.sort or any other method).
 
-One way to work around this issue while leaving the rest of your code untouched is to serialize and deserialize the response prior to passing it to the success callback. To that end, you can make use of the JSON object within the dataFilter callback (if your browser does not provide a native JSON implementation, check the [http://www.json.org/json2.js json.org one]).
+One way to work around this issue while leaving the rest of your code untouched is to serialize and deserialize the response prior to passing it to the success callback. To that end, you can make use of the JSON object within the dataFilter callback (if your browser does not provide a native JSON implementation, check the [http://www.json.org/json2.js json.org one] or [http://code.google.com/p/jquery-json/ thi nice little jQuery plugin]).
 
 The code goes as follows:
 {{{
