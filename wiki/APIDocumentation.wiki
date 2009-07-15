@@ -6,7 +6,7 @@
 
 Load a remote JSON object using a JSONP request.
 
-$.jsonp() returns the extended options (the _xOption_ object) for the query (that is an object containing all the options passed to the function plus defaults for those not provided). In most cases you won't need _xOption_ to manipulate directly, but it is available if you need to abort the request manually (_xOption_ provides an _abort()_ method to that end).
+$.jsonp() returns the extended options (the _xOptions_ object) for the query (that is an object containing all the options passed to the function plus defaults for those not provided). In most cases you won't need _xOptions_ to manipulate directly, but it is available if you need to abort the request manually (_xOptions_ provides an _abort()_ method to that end).
 
 $.jsonp() takes one argument, an object of key/value pairs, that are used to initialize and handle the request. All options are optional. A default can be set for any option with $.jsonp.setup(). See below for a full list of the key/values that can be used.
 
@@ -16,8 +16,8 @@ $.jsonp() takes one argument, an object of key/value pairs, that are used to ini
 
 A function called before the request is even performed. You may return false in function to cancel the request.
 {{{
-function (xOption) {
-  this; // the xOption object
+function (xOptions) {
+  this; // the xOptions object
 }
 }}}
 
@@ -51,10 +51,10 @@ $.jsonp({
 
 ===complete - _function (undefined)_===
 
-A function to be called when the request finishes (after success and error callbacks are executed). The function gets passed two arguments: The _xOption_ object and a string describing the type of completion of the request (_"success"_, _"error"_ or _"timeout"_).
+A function to be called when the request finishes (after success and error callbacks are executed). The function gets passed two arguments: The _xOptions_ object and a string describing the type of completion of the request (_"success"_, _"error"_ or _"timeout"_).
 {{{
-function (xOption, textStatus) {
-  this; // the xOption object
+function (xOptions, textStatus) {
+  this; // the xOptions object
 }
 }}}
 
@@ -75,10 +75,10 @@ function (json) {
 
 ===error - _function (undefined)_===
 
-A function to be called if the request fails. The function is passed two arguments: The xOption object and a string describing the type of error that occurred. Possible values for the second argument are "error" (the request finished but the JSONP callback was not called) or "timeout".
+A function to be called if the request fails. The function is passed two arguments: The xOptions object and a string describing the type of error that occurred. Possible values for the second argument are "error" (the request finished but the JSONP callback was not called) or "timeout".
 {{{
-function (xOption, textStatus) {
-  this; // the xOption object
+function (xOptions, textStatus) {
+  this; // the xOptions object
 }
 }}}
 
@@ -92,7 +92,7 @@ Lifetime of this cache is page based which means it gets erased at each page rel
 A function to be called if the request succeeds. The function gets passed two arguments: The JSON object returned from the server and a string describing the status (always "success").
 {{{
 function (json, textStatus) {
-  this; // the xOption object
+  this; // the xOptions object
 }
 }}}
 
