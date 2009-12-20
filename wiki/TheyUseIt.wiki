@@ -1,6 +1,13 @@
 #summary Projects that use jquery-jsonp
 
-  * [http://code.google.com/p/jquery-twitter-api/ jQuery Twitter API]
+===Applications===
+
   * [http://tweepsect.com/ tweepsect]
+
+===Plugins===
+
+  * [http://code.google.com/p/jquery-twitter-api/ jQuery Twitter API]
+
+=== ===
 
 _Please, leave a comment under this very page if you wish to be listed_
