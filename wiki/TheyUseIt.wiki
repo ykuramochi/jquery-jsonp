@@ -2,6 +2,7 @@
 
 ===Applications===
 
+  * [http://mobileabstracts.com Mobile Abstracts]
   * [http://tweepsect.com/ tweepsect]
 
 ===Plugins===
