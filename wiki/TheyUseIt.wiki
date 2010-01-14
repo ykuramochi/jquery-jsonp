@@ -27,7 +27,3 @@ Tweepsect: Intersect a tweep's lists of followers and following tweeps to determ
 ====[http://code.google.com/p/jquery-twitter-api/ jQuery Twitter API]====
 
 jQuery Twitter API aims to give Web developers the ability to request Twitter public informations from a simple JavaScript function call. See Twitter API for more information http://apiwiki.twitter.com/.
-
-=== ===
-
-_Please, leave a comment under this very page if you wish to be listed_
