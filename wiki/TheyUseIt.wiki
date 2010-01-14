@@ -1,4 +1,5 @@
 #summary Projects that use jquery-jsonp
+#labels Featured
 
 ===Applications===
 
