@@ -2,16 +2,31 @@
 
 ===Applications===
 
-  * [http://mobileabstracts.com Mobile Abstracts]
+====[http://mobileabstracts.com Mobile Abstracts]====
+
+Use Mobile Abstracts to search the 16,000 medical journal abstracts in PubMed from your iPhone or iPod Touch, anywhere you have an internet connection. Find the citations, read the abstracts, and even pull up the PDF's.
 
 ===Websites / Services===
 
-  * [http://playlistify.org/ PlayListify.org]
-  * [http://tweepsect.com/ tweepsect]
+====[http://playlistify.org/ PlayListify.org]====
+
+Everybody loves Spotify. We too! However some things can be enhanced. How to link your iTunes to your Spotify player for example? Or combine Spotify and Last.fm or Imeem?
+
+I have built a solution for that which lets you easily turn your iTunes Library and iTunes playlists into Spotify playlists, with minimal effort, and almost completely automated!
+
+====[http://tweepsect.com/ tweepsect]====
+
+Tweep: A user of Twitter.
+
+Stalker: A tweep who follows another who does not follow them back.
+
+Tweepsect: Intersect a tweep's lists of followers and following tweeps to determine who is stalking the tweep and who the tweep is stalking.
 
 ===Plugins===
 
-  * [http://code.google.com/p/jquery-twitter-api/ jQuery Twitter API]
+====[http://code.google.com/p/jquery-twitter-api/ jQuery Twitter API]====
+
+jQuery Twitter API aims to give Web developers the ability to request Twitter public informations from a simple JavaScript function call. See Twitter API for more information http://apiwiki.twitter.com/.
 
 === ===
 
