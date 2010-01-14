@@ -1,13 +1,13 @@
 #summary Projects that use jquery-jsonp
 #labels Featured
 
-===Applications===
+==Applications==
 
 ====[http://mobileabstracts.com Mobile Abstracts]====
 
 Use Mobile Abstracts to search the 16,000 medical journal abstracts in PubMed from your iPhone or iPod Touch, anywhere you have an internet connection. Find the citations, read the abstracts, and even pull up the PDF's.
 
-===Websites / Services===
+==Websites / Services==
 
 ====[http://playlistify.org/ PlayListify.org]====
 
@@ -23,7 +23,7 @@ Stalker: A tweep who follows another who does not follow them back.
 
 Tweepsect: Intersect a tweep's lists of followers and following tweeps to determine who is stalking the tweep and who the tweep is stalking.
 
-===Plugins===
+==Plugins==
 
 ====[http://code.google.com/p/jquery-twitter-api/ jQuery Twitter API]====
 
