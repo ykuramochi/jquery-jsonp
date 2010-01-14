@@ -5,6 +5,10 @@
   * [http://mobileabstracts.com Mobile Abstracts]
   * [http://tweepsect.com/ tweepsect]
 
+===Websites / Services===
+
+  * [http://playlistify.org/ PlayListify.org]
+
 ===Plugins===
 
   * [http://code.google.com/p/jquery-twitter-api/ jQuery Twitter API]
