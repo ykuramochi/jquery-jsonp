@@ -3,11 +3,11 @@
 ===Applications===
 
   * [http://mobileabstracts.com Mobile Abstracts]
-  * [http://tweepsect.com/ tweepsect]
 
 ===Websites / Services===
 
   * [http://playlistify.org/ PlayListify.org]
+  * [http://tweepsect.com/ tweepsect]
 
 ===Plugins===
 
