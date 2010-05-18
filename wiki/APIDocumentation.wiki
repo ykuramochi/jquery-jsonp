@@ -26,7 +26,7 @@ function (xOptions) {
 
 If set to false it will force the data that you request not to be cached by the browser, unless the pageCache option is set to true.
 
-===callback - _string ("C")_===
+===callback - _string ("`_`jqjsp")_===
 
 Name of the JSONP callback as provided in the request url. Most of the time, you won't have to change this value but some JSONP providers have a predefined callback name that cannot be overidden. Set the name of said callback in the _callback_ option and $.jsonp will catch the call.
 
