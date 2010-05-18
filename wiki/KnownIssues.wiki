@@ -1,5 +1,5 @@
-#summary Known limitations that probably won't be fixed
+#summary Known limitations that won't be fixed
 
 = Known Issues =
 
-  * *document.domain (_Internet Explorer_)*: $.jsonp() does not work when document.domain is set in Internet Explorer.
+  * *document.domain (_Internet Explorer_)*: jQuery-JSONP version 1.x does not work when document.domain is set in Internet Explorer. Version 2.x doesn't suffer from this limitation.
