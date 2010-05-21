@@ -33,3 +33,9 @@ jQuery Twitter API aims to give Web developers the ability to request Twitter pu
 On the front end we make a jsonp request, which when finished, starts up again. We are of course passing a token that indicates what data we received, for example a timestamp.
 
 That describes long polling in a nutshell; of course there are some pitfalls and issues to watch out for with this technique, such as error handling, server timeout and connection timing.
+
+====[http://yoxigen.com/yoxview/ YoxView]====
+
+YoxView is a free image and video viewer for websites. It's written in javascript using jQuery and is available as a jQuery plugin.
+
+YoxView is inspired by Lokesh Dhakar's Lightbox. Like it, YoxView displays content above the website's content, as a separate layer.
