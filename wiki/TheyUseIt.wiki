@@ -27,3 +27,9 @@ Tweepsect: Intersect a tweep's lists of followers and following tweeps to determ
 ====[http://code.google.com/p/jquery-twitter-api/ jQuery Twitter API]====
 
 jQuery Twitter API aims to give Web developers the ability to request Twitter public informations from a simple JavaScript function call. See Twitter API for more information http://apiwiki.twitter.com/.
+
+====[http://jsguy.com/?p=103&cpage=1#comment-671 Long Poll JSONP]====
+
+On the front end we make a jsonp request, which when finished, starts up again. We are of course passing a token that indicates what data we received, for example a timestamp.
+
+That describes long polling in a nutshell; of course there are some pitfalls and issues to watch out for with this technique, such as error handling, server timeout and connection timing.
