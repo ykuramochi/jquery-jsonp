@@ -101,6 +101,12 @@ function (json, textStatus) {
 
 If greater than 0, sets a local timeout (in milliseconds) for the request. This will override the global timeout, if one is set via $.jsonp.setup. For example, you could use this property to give a single request a longer timeout than all other requests that you've set to time out in one second.
 
+===traditional - _boolean (false)_===
+
+*_as of version 2.0.2_*
+
+Set this to true if you wish to use the traditional style of [http://api.jquery.com/jQuery.param/ param serialization].
+
 ===url - _String (location.href)_===
 
 The URL to request. If more than one _?_ is found in the url, the latest will be replaced by the value of the _callback_ option. Note that, given this rule, no valid url can have more than 2 _?_.
