@@ -66,9 +66,13 @@ function (xOptions, textStatus) {
 This object will be made the context of all jsonp-related callbacks. For example specifying a DOM element as the context will make that the context for the complete callback of a request, like so:
 
 {{{
-$.jsonp({ url: "test.php?callback=?", context: document.body, success: function(){
-  $(this).addClass("done");
-}});
+$.jsonp({
+  url: "test.php?callback=?",
+  context: document.body,
+  success: function() {
+    $(this).addClass("done");
+  }
+});
 }}}
 
 ===data - _Object | String (undefined)_===
