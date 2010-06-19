@@ -55,8 +55,20 @@ $.jsonp({
 A function to be called when the request finishes (after success and error callbacks are executed). The function gets passed two arguments: The _xOptions_ object and a string describing the type of completion of the request (_"success"_, _"error"_ or _"timeout"_).
 {{{
 function (xOptions, textStatus) {
-  this; // the xOptions object
+  this; // the xOptions object or xOptions.context if provided
 }
+}}}
+
+===context - _Object (undefined)_===
+
+*_as of version 2.1.1_*
+
+This object will be made the context of all jsonp-related callbacks. For example specifying a DOM element as the context will make that the context for the complete callback of a request, like so:
+
+{{{
+$.jsonp({ url: "test.php?callback=?", context: document.body, success: function(){
+  $(this).addClass("done");
+}});
 }}}
 
 ===data - _Object | String (undefined)_===
@@ -79,7 +91,7 @@ function (json) {
 A function to be called if the request fails. The function is passed two arguments: The xOptions object and a string describing the type of error that occurred. Possible values for the second argument are "error" (the request finished but the JSONP callback was not called) or "timeout".
 {{{
 function (xOptions, textStatus) {
-  this; // the xOptions object
+  this; // the xOptions object or xOptions.context if provided
 }
 }}}
 
@@ -93,7 +105,7 @@ Lifetime of this cache is page based which means it gets erased at each page rel
 A function to be called if the request succeeds. The function gets passed two arguments: The JSON object returned from the server and a string describing the status (always "success").
 {{{
 function (json, textStatus) {
-  this; // the xOptions object
+  this; // the xOptions object or xOptions.context if provided
 }
 }}}
 
