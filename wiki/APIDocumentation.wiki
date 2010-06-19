@@ -75,7 +75,7 @@ This object will be made the context of all xOptions-related callbacks. For exam
 $.jsonp({
   url: "test.php?callback=?",
   context: document.body,
-  success: function() {
+  complete: function() {
     $(this).addClass("done");
   }
 });
