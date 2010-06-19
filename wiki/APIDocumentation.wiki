@@ -50,6 +50,12 @@ $.jsonp({
 });
 }}}
 
+===charset - _String (undefined)_===
+
+*_as of version 2.1.1_*
+
+Forces the request to be interpreted as a certain charset. Only needed for charset differences between the remote and local content.
+
 ===complete - _function (undefined)_===
 
 A function to be called when the request finishes (after success and error callbacks are executed). The function gets passed two arguments: The _xOptions_ object and a string describing the type of completion of the request (_"success"_, _"error"_ or _"timeout"_).
