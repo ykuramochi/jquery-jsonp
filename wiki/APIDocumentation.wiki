@@ -63,7 +63,7 @@ function (xOptions, textStatus) {
 
 *_as of version 2.1.1_*
 
-This object will be made the context of all jsonp-related callbacks. For example specifying a DOM element as the context will make that the context for the complete callback of a request, like so:
+This object will be made the context of all xOptions-related callbacks. For example specifying a DOM element as the context will make that the context for the complete callback of a request, like so:
 
 {{{
 $.jsonp({
