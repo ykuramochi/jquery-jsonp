@@ -18,7 +18,7 @@ $.jsonp() takes one argument, an object of key/value pairs, that are used to ini
 A function called before the request is even performed. You may return false in function to cancel the request.
 {{{
 function (xOptions) {
-  this; // the xOptions object
+  this; // the xOptions object or xOptions.context if provided
 }
 }}}
 
