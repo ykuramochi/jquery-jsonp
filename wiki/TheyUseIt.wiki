@@ -22,6 +22,10 @@ Stalker: A tweep who follows another who does not follow them back.
 
 Tweepsect: Intersect a tweep's lists of followers and following tweeps to determine who is stalking the tweep and who the tweep is stalking.
 
+====[http://www.epa.gov/waters/tools/WATERSServicesJSLib/WATERSServicesJSLib.html WATERS JavaScript Library]====
+
+The WATERS JavaScript Library provides an easy to use interface that hides the complexities of calling the WATERS HTTP services. The library supports both AJAST and AJAX style requests.
+
 ==Plugins==
 
 ====[http://code.google.com/p/jquery-twitter-api/ jQuery Twitter API]====
