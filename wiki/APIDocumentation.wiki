@@ -30,6 +30,8 @@ If set to false it will force the data that you request not to be cached by the 
 
 Name of the JSONP callback as provided in the request url. Most of the time, you won't have to change this value but some JSONP providers have a predefined callback name that cannot be overidden. Set the name of said callback in the _callback_ option and $.jsonp will catch the call.
 
+*_As of version 2.0, the library redefines a function for the callback in the global scope, so it is no longer safe to use the name of a function already defined: said function will be redefined by jQuery-JSONP._*
+
 ===callbackParameter - _string (undefined)_===
 
 *_as of version 1.0.1_*
