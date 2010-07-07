@@ -16,7 +16,7 @@
 	function noop() {
 	}
 	
-	// Generic callback for firefox & opera
+	// Generic callback
 	function genericCallback( data ) {
 		lastValue = [ data ];
 	}
