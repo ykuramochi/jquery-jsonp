@@ -32,6 +32,8 @@ Name of the JSONP callback as provided in the request url. Most of the time, you
 
 *_As of version 2.0, the library defines a function for the callback in the global scope, so it is no longer safe to use the name of a function already defined: said function will be redefined by jQuery-JSONP._*
 
+*_On the other hand, it is still perfectly safe to have several concurrent requests using the same callback name: in that case, jQuery-JSONP ensures no collision occurs internally._*
+
 ===callbackParameter - _string (undefined)_===
 
 *_as of version 1.0.1_*
