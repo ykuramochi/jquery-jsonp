@@ -1,5 +1,5 @@
 /*
- * jQuery JSONP Core Plugin 2.1.2 (2010-06-20)
+ * jQuery JSONP Core Plugin 2.1.3 (2010-10-03)
  * 
  * http://code.google.com/p/jquery-jsonp/
  *
@@ -126,7 +126,7 @@
 		url += data ? ( qMarkOrAmp( url ) + data ) : STR_EMPTY;
 		
 		// Add callback parameter if provided as option
-		callbackParameter && ( url += qMarkOrAmp( url ) + escape(callbackParameter) + "=?" );
+		callbackParameter && ( url += qMarkOrAmp( url ) + encodeURIComponent( callbackParameter ) + "=?" );
 		
 		// Add anticache parameter if needed
 		! cacheFlag && ! pageCacheFlag && ( url += qMarkOrAmp( url ) + "_" + ( new Date() ).getTime() + "=" );
