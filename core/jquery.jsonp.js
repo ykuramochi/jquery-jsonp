@@ -149,17 +149,17 @@
 		}
 		
 		// Error notifier
-	    function notifyError( type ) {
-	    	! done++ && setTimeout( function() {
-	    		// Clean up
-	    		cleanUp();
+		function notifyError( type ) {
+			! done++ && setTimeout( function() {
+				// Clean up
+				cleanUp();
 				// If pure error (not timeout), cache if needed
 				pageCacheFlag && type != STR_TIMEOUT && ( pageCache[ url ] = type );
 				// Call error then complete
 				callIfDefined( xOptions.error , xOptions , [ xOptions , type ] );
 				callIfDefined( completeCallback , xOptions , [ xOptions , type ] );
-	    	} , 0 );
-	    }
+			} , 0 );
+		}
 	    
 		// Check page cache
 		pageCacheFlag && ( pageCached = pageCache[ url ] ) 
