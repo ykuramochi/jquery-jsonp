@@ -1,5 +1,5 @@
 /*
- * jQuery JSONP Core Plugin 2.1.3 (2010-10-03)
+ * jQuery JSONP Core Plugin 2.1.4 (2010-11-17)
  * 
  * http://code.google.com/p/jquery-jsonp/
  *
@@ -216,7 +216,7 @@
 						script.event = STR_ONCLICK;
 						script.htmlFor = script.id;
 						script[ STR_ONREADYSTATECHANGE ] = function() {
-							script.readyState == "loaded" && callback();
+							/loaded|complete/.test( script.readyState ) && callback();
 						};
 						
 					// All others: standard handlers
