@@ -2,4 +2,4 @@
 
 = Known Issues =
 
-  * *document.domain (_Internet Explorer_)*: jQuery-JSONP version 1.x does not work when document.domain is set in Internet Explorer. Version 2.x doesn't suffer from this limitation.
+  * *loading spinner*: most browsers will display a loading spinner everytime you make a request. It can be very annoying especially for long polling requests. Sadly, it's a behaviour that seems to have generalized ("_now_" being late 2010). There is no way to work around this since injecting a script tag in the DOM triggers the animation _outside_ of the javascript sandbox (anyone with a solution is welcome to comment below and prove me wrong, of course).
