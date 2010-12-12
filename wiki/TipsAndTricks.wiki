@@ -79,11 +79,11 @@ $.jsonp handles two types of cache. One is browser based, the other is page base
 
 ===Browser cache===
 
-Usual JSONP implementations rely on generated callback names to allow concurrent JSONP requests. $.jsonp does not. No matter the situation, if you stick by the default behavior, the callback will always be "C". This means that the url used to perform the request is constant from one call to another for the same set of parameters. In that case, smart providers can issue a _304: Not Modified_ and allow the browser to cache the HTTP response.
+Usual JSONP implementations rely on generated callback names to allow concurrent JSONP requests. $.jsonp does not. No matter the situation, provided you don't change it in the options, the callback will always be "`_`jqjsp". This means that the url used to perform the request is exactly the same from one call to another for the same set of parameters. In that case, "smart" Data APIs can issue a _304: Not Modified_ HTTP response, asking browsers to retrieve the previous response they obtained for the same url from cache.
 
-This is not an exact science. [http://www.youtube.com/ YouTube], for instance, does not always issue a _304_ but when it does eventually, it means further JSONP requests will be directly taken from the cache.
+This is not an exact science. [http://www.youtube.com/ YouTube], for instance, does not always issue a _304_ but when it does eventually, it means further JSONP requests will not involve any network traffic.
 
-To take advantage of browser caching, you have to set the _cache_ option to true. For instance:
+To take advantage of browser caching, you have to set the _cache_ option to true. For 1instance:
 {{{
 $.jsonp({
     url: "...",
@@ -99,11 +99,11 @@ $.jsonp({
 
 ===Page-based cache===
 
-Some providers do not take in consideration the situation when the callback name has not changed. In this case, you can use the page-based cache. This cache is stored in the javascript VM memory and ensures that, when you make a request that's already been handled, you'll get the exact same answer and no network call will be made.
+Some providers just ignore situations when the callback name has not changed. In this case, you can use the page-based cache. This cache is stored in the javascript VM memory and ensures that, when you make a request that has been answered previously, you will get the exact same response and no network traffic will occur.
 
-This cache is wiped-out as soon as the page is reloaded.
+This cache is wiped out as soon as the page is reloaded.
 
-To take advantage of page-based caching, you have to set the _pageCache_ options to true. Note that doing so overiddes any setting the _cache_ option could have and sets it to true also. For instance:
+To take advantage of page-based caching, you have to set the _pageCache_ option to true. Note that doing so overiddes any setting the _cache_ option could have and it is then also considered to be true. For instance:
 {{{
 $.jsonp({
     url: "...",
