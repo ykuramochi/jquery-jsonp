@@ -8,6 +8,10 @@ Use Mobile Abstracts to search the 16,000 medical journal abstracts in PubMed fr
 
 ==Websites / Services==
 
+====[http://www.nibbo.com/ Nibbo]===
+
+While other search engines offer only one type of search at a time, Nibbo will show a preview of multiple search types in an unobstrusive way, and provide information like the number of results that are to be expected for the different engines. The type and order of those previews is completely configurable, as well as the default search settings.
+
 ====[http://playlistify.org/ PlayListify.org]====
 
 Everybody loves Spotify. We too! However some things can be enhanced. How to link your iTunes to your Spotify player for example? Or combine Spotify and Last.fm or Imeem?
