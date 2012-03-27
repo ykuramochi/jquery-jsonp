@@ -9,6 +9,8 @@ Load a remote JSON object using a JSONP request.
 
 $.jsonp() returns the extended options (the _xOptions_ object) for the query (that is an object containing all the options passed to the function plus defaults for those not provided). In most cases you won't need _xOptions_ to manipulate directly, but it is available if you need to abort the request manually (_xOptions_ provides an _abort()_ method to that end).
 
+*_As of version 2.3.0, if you use jQuery-JSONP with jQuery 1.5+, the _xOptions_ object is a Promise. See [http://api.jquery.com/deferred.promise/ jQuery's documentation] for more information on Promises and Deferreds._* 
+
 $.jsonp() takes one argument, an object of key/value pairs, that are used to initialize and handle the request. All options are optional. A default can be set for any option with $.jsonp.setup(). See below for a full list of the key/values that can be used.
 
 ==Options==
