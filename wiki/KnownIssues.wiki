@@ -1,5 +1,0 @@
-#summary Known limitations that won't be fixed
-
-= Known Issues =
-
-  * *loading spinner*: most browsers will display a loading spinner everytime you make a request. It can be very annoying especially for long polling requests. Sadly, it's a behaviour that seems to have generalized ("_now_" being late 2010). There is no way to work around this since injecting a script tag in the DOM triggers the animation _outside_ of the javascript sandbox (anyone with a solution is welcome to comment below and prove me wrong, of course).
