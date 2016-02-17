@@ -1,0 +1,1 @@
+# [jQuery-JSONP moved to github](https://github.com/jaubourg/jquery-jsonp) #
